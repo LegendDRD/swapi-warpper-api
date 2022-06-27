@@ -5,7 +5,7 @@ export const swapi = (query: string) => {
     headers: {
       'Content-Type': 'application/json',
     },
-  }).then((res) => res.json());
+  }).then((res: any) => res.json());
 };
 
 const getMany = (data: any, hasMany: string[]) => {

@@ -10,12 +10,12 @@
     "generate": "graphql-codegen --config codegen.yml"
   },
   "devDependencies": {
-    "@types/node-fetch": "^2.6.1",
-    "ts-node": "^10.7.0",
-    "typescript": "^4.6.3",
-    "@graphql-codegen/typescript-resolvers": "2.6.1",
+    "@graphql-codegen/introspection": "2.1.1",
     "@graphql-codegen/typescript": "2.4.8",
-    "@graphql-codegen/introspection": "2.1.1"
+    "@graphql-codegen/typescript-resolvers": "2.6.1",
+    "@types/node-fetch": "^2.6.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
   },
   "dependencies": {
     "@graphql-codegen/cli": "^2.6.2",
