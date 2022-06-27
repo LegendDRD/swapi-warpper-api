@@ -1,0 +1,24 @@
+type Person {
+    id: ID!
+    name: String!
+    height: Int
+    mass: String
+    birth_year: String
+    gender: String
+    homeworld_id: ID
+    homeworld: Planet
+}
+
+type Planet {
+    id: ID!
+    name: String!
+}
+
+
+type Query {
+    planet(id: ID!): Planet
+    listPlanets(page: Int): [Planet!]!
+    person(id: ID!): Person
+    listPeople(page: Int): [Person!]!
+    SearchPeople(name: String!): [Person!]!
+}
