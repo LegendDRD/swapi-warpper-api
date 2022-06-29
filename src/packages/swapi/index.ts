@@ -53,6 +53,7 @@ export const findOne = async <T>(
 };
 
 interface IFindMany {
+  name?: string;
   page?: number;
   hasMany?: string[];
   hasOne?: string[];
@@ -60,9 +61,9 @@ interface IFindMany {
 
 export const findMany = async <T>(
   entity: string,
-  { page, hasMany, hasOne }: IFindMany,
+  { name, page, hasMany, hasOne }: IFindMany,
 ): Promise<T[]> => {
-  const data = await swapi(`${entity}/${page ? `?page=${page}` : ''}`);
+  const data = await swapi(`${entity}/${page ? `?page=${page}&search=${name}` : ''}`);
 
   return data.results.map((item: any, index: number) => ({
     ...item,

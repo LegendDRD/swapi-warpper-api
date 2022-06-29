@@ -20,6 +20,7 @@ export class Person {
   ): Promise<PersonType[]> =>
     findMany<PersonType>('people', {
       page: args.page || 1,
+      name: args.name || '',
       hasOne
     });
 

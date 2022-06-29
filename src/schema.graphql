@@ -19,6 +19,6 @@ type Query {
     planet(id: ID!): Planet
     listPlanets(page: Int): [Planet!]!
     person(id: ID!): Person
-    listPeople(page: Int): [Person!]!
+    listPeople(page: Int, name: String): [Person!]!
     SearchPeople(name: String!): [Person!]!
 }

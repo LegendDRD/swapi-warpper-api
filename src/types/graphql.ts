@@ -48,6 +48,7 @@ export type QuerySearchPeopleArgs = {
 
 
 export type QueryListPeopleArgs = {
+  name?: InputMaybe<Scalars['String']>;
   page?: InputMaybe<Scalars['Int']>;
 };
 
